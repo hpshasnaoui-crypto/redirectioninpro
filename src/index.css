@@ -216,10 +216,11 @@ body{
 .link.primary .go{ color:var(--accent-ink); opacity:.75; }
 
 .link.disabled{
-  filter:grayscale(1);
-  opacity:.55;
   cursor:default;
   pointer-events:none;
+}
+.link.disabled .label{
+  color:var(--ink-soft);
 }
 .link.disabled:hover{
   transform:none;
