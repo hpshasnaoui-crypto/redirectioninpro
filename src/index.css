@@ -215,6 +215,18 @@ body{
 .link.primary .sub{ color:var(--accent-ink); opacity:.75; }
 .link.primary .go{ color:var(--accent-ink); opacity:.75; }
 
+.link.disabled{
+  filter:grayscale(1);
+  opacity:.55;
+  cursor:default;
+  pointer-events:none;
+}
+.link.disabled:hover{
+  transform:none;
+  box-shadow:none;
+  border-color:var(--line);
+}
+
 .divider{
   width:100%;
   display:flex;

@@ -55,6 +55,29 @@ const LINKS = [
   },
 ]
 
+const VISUALS = [
+  {
+    label: 'Meuble Bureau',
+    sub: 'Mobilier bureautique',
+    logo: '/visuals/meuble-bureau.png',
+  },
+  {
+    label: 'Meuble Rangement',
+    sub: 'Meuble de rangement',
+    logo: '/visuals/meuble-rangement.jpg',
+  },
+  {
+    label: 'Meuble Miroir',
+    sub: 'Meuble décoratif',
+    logo: '/visuals/meuble-miroir.png',
+  },
+  {
+    label: 'Meuble Bahut',
+    sub: 'Meuble séjour',
+    logo: '/visuals/meuble-bahut.png',
+  },
+]
+
 const SOCIALS = [
   {
     name: 'Instagram',
@@ -150,6 +173,22 @@ export default function App() {
               </a>
             ))}
           </nav>
+
+          <div className="divider">Mobilier</div>
+
+          <div className="links" aria-label="Visualisations mobilier">
+            {VISUALS.map((v) => (
+              <div key={v.label} className="link disabled" aria-disabled="true">
+                <span className="ic ic-logo">
+                  <img src={v.logo} alt="" />
+                </span>
+                <span className="label">
+                  {v.label}
+                  <span className="sub">{v.sub}</span>
+                </span>
+              </div>
+            ))}
+          </div>
 
           <div className="divider">Réseaux</div>
 
