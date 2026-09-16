@@ -59,7 +59,7 @@ const VISUALS = [
   {
     label: 'Meuble Bureau',
     sub: 'Mobilier bureautique',
-    logo: '/visuals/meuble-bureau.png',
+    logo: '/visuals/meuble-bureau.jpg',
   },
   {
     label: 'Meuble Rangement',
@@ -69,12 +69,12 @@ const VISUALS = [
   {
     label: 'Meuble Miroir',
     sub: 'Meuble décoratif',
-    logo: '/visuals/meuble-miroir.png',
+    logo: '/visuals/meuble-miroir.jpg',
   },
   {
     label: 'Meuble Bahut',
     sub: 'Meuble séjour',
-    logo: '/visuals/meuble-bahut.png',
+    logo: '/visuals/meuble-bahut.jpg',
   },
 ]
 
