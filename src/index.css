@@ -215,19 +215,10 @@ body{
 .link.primary .sub{ color:var(--accent-ink); opacity:.75; }
 .link.primary .go{ color:var(--accent-ink); opacity:.75; }
 
-.link.disabled{
-  cursor:default;
-  pointer-events:none;
-}
-.link.disabled .label{
+.link.muted .label{
   color:var(--ink-soft);
 }
-.link.disabled:hover{
-  transform:none;
-  box-shadow:none;
-  border-color:var(--line);
-}
-.link.disabled .soon{
+.link .soon{
   flex:none;
   font-family:'IBM Plex Mono', monospace;
   font-size:9.5px;

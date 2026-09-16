@@ -55,7 +55,14 @@ const LINKS = [
   },
 ]
 
+const MOBILIER_HREF = 'https://inpro-3d.hps-hasnaoui.workers.dev/#top'
+
 const VISUALS = [
+  {
+    label: 'Meuble Bain',
+    sub: 'Meuble de salle de bain',
+    logo: '/visuals/meuble-bain.jpg',
+  },
   {
     label: 'Meuble Bureau',
     sub: 'Mobilier bureautique',
@@ -75,11 +82,6 @@ const VISUALS = [
     label: 'Meuble Bahut',
     sub: 'Meuble séjour',
     logo: '/visuals/meuble-bahut.jpg',
-  },
-  {
-    label: 'Meuble Bain',
-    sub: 'Meuble de salle de bain',
-    logo: '/visuals/meuble-bain.jpg',
   },
 ]
 
@@ -183,7 +185,7 @@ export default function App() {
 
           <div className="links" aria-label="Visualisations mobilier">
             {VISUALS.map((v) => (
-              <div key={v.label} className="link disabled" aria-disabled="true">
+              <a key={v.label} className="link muted" href={MOBILIER_HREF} target="_blank" rel="noopener">
                 <span className="ic ic-logo">
                   <img src={v.logo} alt="" />
                 </span>
@@ -192,7 +194,7 @@ export default function App() {
                   <span className="sub">{v.sub}</span>
                 </span>
                 <span className="soon">Bientôt&nbsp;disponible</span>
-              </div>
+              </a>
             ))}
           </div>
 
