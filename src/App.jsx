@@ -67,21 +67,25 @@ const VISUALS = [
     label: 'Meuble Bureau',
     sub: 'Mobilier bureautique',
     logo: '/visuals/meuble-bureau.jpg',
+    soon: true,
   },
   {
     label: 'Meuble Rangement',
     sub: 'Meuble de rangement',
     logo: '/visuals/meuble-rangement.jpg',
+    soon: true,
   },
   {
     label: 'Meuble Miroir',
     sub: 'Meuble décoratif',
     logo: '/visuals/meuble-miroir.jpg',
+    soon: true,
   },
   {
     label: 'Meuble Bahut',
     sub: 'Meuble séjour',
     logo: '/visuals/meuble-bahut.jpg',
+    soon: true,
   },
 ]
 
@@ -184,18 +188,31 @@ export default function App() {
           <div className="divider">Mobilier</div>
 
           <div className="links" aria-label="Visualisations mobilier">
-            {VISUALS.map((v) => (
-              <a key={v.label} className="link muted" href={MOBILIER_HREF} target="_blank" rel="noopener">
-                <span className="ic ic-logo">
-                  <img src={v.logo} alt="" />
-                </span>
-                <span className="label">
-                  {v.label}
-                  <span className="sub">{v.sub}</span>
-                </span>
-                <span className="soon">Bientôt&nbsp;disponible</span>
-              </a>
-            ))}
+            {VISUALS.map((v) =>
+              v.soon ? (
+                <div key={v.label} className="link muted" aria-disabled="true">
+                  <span className="ic ic-logo">
+                    <img src={v.logo} alt="" />
+                  </span>
+                  <span className="label">
+                    {v.label}
+                    <span className="sub">{v.sub}</span>
+                  </span>
+                  <span className="soon">Bientôt&nbsp;disponible</span>
+                </div>
+              ) : (
+                <a key={v.label} className="link" href={MOBILIER_HREF} target="_blank" rel="noopener">
+                  <span className="ic ic-logo">
+                    <img src={v.logo} alt="" />
+                  </span>
+                  <span className="label">
+                    {v.label}
+                    <span className="sub">{v.sub}</span>
+                  </span>
+                  <span className="go">&rarr;</span>
+                </a>
+              ),
+            )}
           </div>
 
           <div className="divider">Réseaux</div>

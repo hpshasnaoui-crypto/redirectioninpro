@@ -215,8 +215,21 @@ body{
 .link.primary .sub{ color:var(--accent-ink); opacity:.75; }
 .link.primary .go{ color:var(--accent-ink); opacity:.75; }
 
+.link.muted{
+  cursor:default;
+  pointer-events:none;
+}
 .link.muted .label{
   color:var(--ink-soft);
+}
+.link.muted:hover{
+  transform:none;
+  box-shadow:none;
+  border-color:var(--line);
+}
+.link.muted .ic-logo img{
+  filter:grayscale(1) blur(1.5px);
+  opacity:.6;
 }
 .link .soon{
   flex:none;
