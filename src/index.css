@@ -218,6 +218,8 @@ body{
 .link.muted{
   cursor:default;
   pointer-events:none;
+  background:var(--paper);
+  backdrop-filter:grayscale(1) blur(4px);
 }
 .link.muted .label{
   color:var(--ink-soft);
@@ -226,10 +228,6 @@ body{
   transform:none;
   box-shadow:none;
   border-color:var(--line);
-}
-.link.muted .ic-logo img{
-  filter:grayscale(1) blur(1.5px);
-  opacity:.6;
 }
 .link .soon{
   flex:none;
