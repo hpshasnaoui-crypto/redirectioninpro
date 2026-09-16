@@ -76,6 +76,11 @@ const VISUALS = [
     sub: 'Meuble séjour',
     logo: '/visuals/meuble-bahut.jpg',
   },
+  {
+    label: 'Meuble Bain',
+    sub: 'Meuble de salle de bain',
+    logo: '/visuals/meuble-bain.jpg',
+  },
 ]
 
 const SOCIALS = [
@@ -186,6 +191,7 @@ export default function App() {
                   {v.label}
                   <span className="sub">{v.sub}</span>
                 </span>
+                <span className="soon">Bientôt&nbsp;disponible</span>
               </div>
             ))}
           </div>

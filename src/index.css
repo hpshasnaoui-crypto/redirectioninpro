@@ -227,6 +227,20 @@ body{
   box-shadow:none;
   border-color:var(--line);
 }
+.link.disabled .soon{
+  flex:none;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:9.5px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  opacity:.65;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:5px 10px;
+  white-space:nowrap;
+}
 
 .divider{
   width:100%;
