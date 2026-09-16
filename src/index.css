@@ -235,10 +235,8 @@ body{
   font-size:9.5px;
   letter-spacing:.03em;
   text-transform:uppercase;
-  color:var(--ink-soft);
-  opacity:.65;
-  background:var(--paper);
-  border:1px solid var(--line);
+  color:var(--surface);
+  background:var(--ink-soft);
   border-radius:20px;
   padding:5px 10px;
   white-space:nowrap;
