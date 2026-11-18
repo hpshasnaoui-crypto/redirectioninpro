@@ -103,7 +103,7 @@ const SOCIALS = [
   },
   {
     name: 'Facebook',
-    href: '#',
+    href: 'https://www.facebook.com/share/1Cc7vQpnGo/',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8.5v3H11v7h3Z" />
@@ -121,12 +121,12 @@ const SOCIALS = [
     ),
   },
   {
-    name: 'YouTube',
-    href: '#',
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@inpro.dz',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="6" width="18" height="12" rx="3.5" />
-        <path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="var(--ink)" stroke="none" />
+        <path d="M14 4v10.2a3.2 3.2 0 1 1-3.2-3.2" />
+        <path d="M14 4c.3 2.3 1.9 3.9 4.2 4.1" />
       </svg>
     ),
   },
@@ -219,7 +219,14 @@ export default function App() {
 
           <div className="social-row">
             {SOCIALS.map((s) => (
-              <a key={s.name} className="social" href={s.href} aria-label={s.name} title={s.name}>
+              <a
+                key={s.name}
+                className="social"
+                href={s.href}
+                aria-label={s.name}
+                title={s.name}
+                {...(s.href !== '#' && { target: '_blank', rel: 'noopener noreferrer' })}
+              >
                 {s.icon}
               </a>
             ))}
